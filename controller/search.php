@@ -6,7 +6,9 @@ $Keyword      = CharCV(Request('Get', 'keyword'));
 $KeywordArray = array_unique(explode(" ", $Keyword));
 $Error        = '';
 
+
 $PostsSearch = false;//是否启用帖子搜索
+
 
 $PostsSearchOffset = array_search('post:true', $KeywordArray);
 if ($PostsSearchOffset !== false) {
@@ -64,13 +66,13 @@ foreach ($KeywordArray as $Key => $KeywordToken) {
 			$SQLKeywordArray['Subject' . $ParamName] = '%' . $KeywordToken . '%';
 			$SQLKeywordArray['Content' . $ParamName] = '%' . $KeywordToken . '%';
 		} else {
+                        
 			//$NormalQuery[] = 't.Topic LIKE :Topic' . $ParamName . ' or t.Tags LIKE :Tag' . $ParamName;
-                        
-                        // -------------- joe [1]---------- always force "And"  normal search aaa + bbb  --------- --------------
-                        $NormalQuery[] = 't.Topic LIKE :Topic' . $ParamName . ' and t.Tags LIKE :Tag' . $ParamName;
-                        
+                        // joe [2] add ( topic or tag)
+                        $NormalQuery[] = '('.'t.Topic LIKE :Topic' . $ParamName . ' or t.Tags LIKE :Tag' . $ParamName . ')';
                         
 			$SQLKeywordArray['Topic' . $ParamName] = '%' . $KeywordToken . '%';
+                        
 			$SQLKeywordArray['Tag' . $ParamName] = '%' . $KeywordToken . '%';
 		}
 	}
@@ -84,13 +86,8 @@ if (!empty($Temp)) {
 
 
 //$Temp = implode(' OR ', $NormalQuery);
-
-// -------------- joe [2]---------- always force "And"  normal search aaa + bbb  --------- --------------
+// joe [1]    (topic or tag) AND (topic or tag) AND (topic or tag)
 $Temp = implode(' AND ', $NormalQuery);
-
-
-
-
 
 if (!empty($Temp)) {
 	$SearchCondition[] = '(' . $Temp . ')';

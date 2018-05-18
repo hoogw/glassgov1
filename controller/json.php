@@ -84,9 +84,15 @@ switch (Request('Request', 'action')) {
 		$Keyword           = Request('Post', 'query');
 		$Response          = array();
 		$Response['query'] = 'Unit';
-		$Result            = $DB->column("SELECT Title FROM " . PREFIX . "dict WHERE Title LIKE :Keyword limit 10", array(
+                
+               
+                // joe [tag_autocomplete][1]
+                $Result            = $DB->column("SELECT Name FROM " . PREFIX . "tags WHERE Name LIKE :Keyword limit 10", array(
 			"Keyword" => $Keyword . "%"
 		));
+                
+                
+                
 		if ($Result) {
 			foreach ($Result as $key => $val) {
 				$Response['suggestions'][] = array(
@@ -99,6 +105,37 @@ switch (Request('Request', 'action')) {
 		}
 		echo json_encode($Response);
 		break;
+                
+         // joe - add --- [tag_autocomplete][3]        
+        case 'searchTopic_autocomplete':
+		//Auth(1);
+		$Keyword           = Request('Post', 'query');
+		$Response          = array();
+		$Response['query'] = 'Unit';
+                
+               
+               
+                $Result            = $DB->column("SELECT Topic FROM " . PREFIX . "topics WHERE Topic LIKE :Keyword limit 10", array(
+			"Keyword" => "%". $Keyword . "%"
+		));
+               
+                
+                
+                
+		if ($Result) {
+			foreach ($Result as $key => $val) {
+				$Response['suggestions'][] = array(
+					'value' => $val,
+					'data' => $val
+				);
+			}
+		} else {
+			$Response['suggestions'][] = '';
+		}
+		echo json_encode($Response);
+		break;        
+                
+                
 	
 	case 'user_exist':
 		$UserName  = strtolower(Request('Post', 'UserName'));

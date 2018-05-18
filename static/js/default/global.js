@@ -232,7 +232,9 @@ $(function() {
 		return false;
 	});
 	$("#SearchInput").autocomplete({
-		serviceUrl: WebsitePath + '/json/tag_autocomplete',
+		//serviceUrl: WebsitePath + '/json/tag_autocomplete',
+                // joe [tag_autocomplete][2]
+                serviceUrl: WebsitePath + '/json/searchTopic_autocomplete',
 		minChars: 2,
 		type: 'post'
 	});
