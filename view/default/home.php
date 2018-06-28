@@ -8,11 +8,17 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		foreach ($TopicsArray as $Topic) {
 		?>
 			<div class="post-list">
+                            
+                           <!-- joe remove avatar  
+                            
 				<div class="item-avatar">
 					<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['UserName']); ?>">
 						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
 					</a>
 				</div>
+                            
+                            -->
+                            
 				<div class="item-content">
 					<h2>
 						<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>">
@@ -63,11 +69,15 @@ Pagination("/page/",$Page,$TotalPage);
 				</div>
 			</div>
 			<!-- main-content end -->
+                        
+                        
 			<!-- main-sider start -->
 			<div class="main-sider">
 				<?php
 				include($TemplatePath.'sider.php');
 				?>
+                            
+                            <!--
 				<div class="sider-box">
 					<div class="sider-box-title"><?php echo $Lang['Website_Statistics']; ?></div>
 					<div class="sider-box-content">
@@ -79,5 +89,10 @@ Pagination("/page/",$Page,$TotalPage);
 						</ul>
 					</div>
 				</div>
+                            -->
+                            
+                            
 			</div>
 			<!-- main-sider end -->
+                        
+                     

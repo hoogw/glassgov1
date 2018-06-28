@@ -72,6 +72,9 @@ if(!$IsAjax){
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $Lang['Language']; ?>"
 	  lang="<?php echo $Lang['Language']; ?>">
 <head>
+    
+    
+    
 	<meta name="renderer" content="webkit"/>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 	<meta http-equiv="Cache-Control" content="no-siteapp"/>
@@ -140,13 +143,30 @@ if(!$IsAjax){
 	<div class="nav-bar">
 		<div class="nav-panel">
 			<div class="inner-nav-panel">
+                            <!--
 				<div class="logo">
 					<a href="<?php echo $Config['WebsitePath']; ?>/">
 						<img src="<?php echo $Config['WebsitePath']; ?>/static/img/logo.png"
 							 alt="<?php echo $Lang['Home']; ?>"/>
+                                                
 					</a>
+                                    
+                                        
 				</div>
+                            
+                            -->
+                            
+                            
+                               
+                                   
+                            
+                            
 				<div class="buttons">
+                                    
+                                    
+                                    
+                                    
+                                    
 					<div class="searchbox">
 						<input type="text" id="SearchInput"
 							   onkeydown="javascript:if((event.keyCode==13)&&(this.value!='')){$('#SearchButton').trigger('click');}"
@@ -155,9 +175,23 @@ if(!$IsAjax){
 							<div class="icon icon-search"></div>
 						</a>
 					</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
 					<?php
 					if ($CurUserID) {
 						?>
+                                    
+                                    
+                                    
+                                    <!-- joe move to view/default/sider.php 
+                                    
+                                    
 						<a href="<?php echo $Config['WebsitePath']; ?>/settings"
 						   title="<?php echo $Lang['Settings']; ?>"<?php echo $UrlPath == 'settings' ? ' class="buttons-active"' : ''; ?>>
 							<div class="icon icon-settings"></div>
@@ -168,6 +202,10 @@ if(!$IsAjax){
 							<div class="icon icon-notifications"></div>
 							<span class="icon-messages-num" id="MessageNumber">0</span>
 						</a>
+                                    
+                                       
+                                       
+                                       
 						<?php
 						if ($CurUserRole == 5) {
 							?>
@@ -177,10 +215,19 @@ if(!$IsAjax){
 							</a>
 						<?php }
 						?>
-						<!-- <a href="<?php echo $Config['WebsitePath']; ?>/users/following"<?php echo $UrlPath == 'favorite_users' ? ' class="buttons-active"' : ''; ?>><?php echo $Lang['Users_Followed']; ?></a>
-					<a href="<?php echo $Config['WebsitePath']; ?>/tags/following"<?php echo $UrlPath == 'favorite_tags' ? ' class="buttons-active"' : ''; ?>><?php echo $Lang['Tags_Followed']; ?></a> -->
+                                    
+                                    -->
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
 						<a href="<?php echo $Config['WebsitePath']; ?>/new"<?php echo $UrlPath == 'new' ? ' class="buttons-active"' : ''; ?>><?php echo $Lang['Create_New_Topic']; ?></a>
-						<?php
+						
+                                                    
+                                                    <?php
 					} else {
 						?>
 						<a href="<?php echo $Config['WebsitePath']; ?>/register"<?php echo $UrlPath == 'register' ? ' class="buttons-active"' : ''; ?>>
@@ -192,10 +239,16 @@ if(!$IsAjax){
 						<?php
 					}
 					?>
-					<!--a href="<?php echo $Config['WebsitePath']; ?>/explore"<?php echo $UrlPath == 'explore' ? ' class="buttons-active"' : ''; ?>>发现</a-->
-					<a href="<?php echo $Config['WebsitePath']; ?>/"<?php echo $UrlPath == 'home' ? ' class="buttons-active"' : ''; ?>>
+					
+                                    
+                                             
+                                             
+                                     <a href="<?php echo $Config['WebsitePath']; ?>/"<?php echo $UrlPath == 'home' ? ' class="buttons-active"' : ''; ?>>
 						<?php echo $Lang['Home']; ?>
 					</a>
+                               
+                                                
+                                                
 				</div>
 				<div class="c"></div>
 			</div>
@@ -243,15 +296,53 @@ if(!$IsAjax){
 	<!-- footer start -->
 	<div class="copyright">
 		<p>
+                    
+                    <big><em>All data are location based. </em></big>
+                    
+                     &nbsp;&nbsp;
+                     
+                     <!--
+                     <a href="http://www.Transparentgov.net" target="_blank">
+                                  
+                                  Transparentgov
+				
+                                 
+                                 </a>
+                    -->
+                     
+                     <small>
+                         <!--
+                        <i class="fa fa-copyright"></i> <?php echo date("Y"); ?>  
+                        <a class="white-text" href="#">Joe hu</a> 
+                        -->
+                        
+                        310-710-6501 <a class="white-text" href="#">huguowen@gmail.com</a>
+                    </small> 
+                    
+                     
+                     
+                   <!--  
+                     &nbsp;&nbsp;
+                    
+                    <big><em><a class="teal-text text-darken-1" href="http://aspmap.transparentgov.net" target="_blank">Transparentgov@2015</a></em></big> 
+                    
+                    &nbsp;&nbsp;
+                            
+                    <big><em><a class="teal-text text-darken-1" href="http://phpmap.transparentgov.net" target="_blank">Transparentgov@2014</a></em></big>
+                            
+                     &nbsp;&nbsp;
+                    -->
+                    
+                    
+                   
+                    
+                    
+                     <!--       
 			<?php echo $Config['SiteName']; ?> 
                                        © <?php echo date("Y"); ?> 
                                       
-                              <a href="http://www.Transparentgov.net" target="_blank">
-                                  
-                                  Transparentgov.net
-				 310-710-6501 huguowen@gmail.com
-                                 
-                                 </a>
+                             
+                       -->
 			
 		</p>
 	</div>

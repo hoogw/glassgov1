@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		require("../config.php");
 	} else {
 		define('ForumLanguage', 'zh-cn');
-		define('DBHost', 'localhost');
+		define('DBHost', '127.0.0.1');
 		define('DBName', 'carbon');
 		define('DBUser', 'root');
 		//define('DBPassword', '');

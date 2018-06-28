@@ -31,11 +31,17 @@ function KeywordHighlight($Content)
 		foreach ($TopicsArray as $Topic) {
 		?>
 		<div class="post-list">
+                    
+                     <!-- joe remove avatar 
+                     
 			<div class="item-avatar">
 				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['UserName']); ?>" target="_blank">
 						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
 					</a>
 			</div>
+                    
+                     -->
+                    
 			<div class="item-content">
 				<h2>
 <?php

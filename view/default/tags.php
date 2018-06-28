@@ -15,11 +15,19 @@ foreach ($TagsArray as $Tag) {
 ?>
 		<div class="tags-list-detail">
 			<div>
+                            
+                           <!-- joe remove avatar 
+                             
+                             
 				<div class="item-avatar">
 					<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag['Name']); ?>">
 						<?php echo GetTagIcon($Tag['ID'], $Tag['Icon'], $Tag['Name'], 'middle'); ?>
 					</a>
 				</div>
+                             
+                             
+                             -->
+                             
 				<div class="tag-item-content grey">
 					<h2>
 						<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag['Name']); ?>">

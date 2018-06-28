@@ -55,8 +55,48 @@ foreach ($OauthData as $Value) {
 		<div class="user-pannel">
 			<div class="user-pannel-name">
 				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($CurUserName); ?>"><?php echo $CurUserName; ?></a>
+                                
+                                 <!--  joe move from default/layout.php -->
+                               
+                                     <a href="<?php echo $Config['WebsitePath']; ?>/settings"
+						   title="<?php echo $Lang['Settings']; ?>"<?php echo $UrlPath == 'settings' ? ' class="buttons-active"' : ''; ?>>
+							<div class="icon icon-settings"></div>
+				     </a>
+                                    
+                                
+                                
+                               
+                                
+						<a href="<?php echo $Config['WebsitePath']; ?>/notifications/list#notifications1"
+						   title="<?php echo $Lang['Notifications']; ?>"<?php echo $UrlPath == 'notifications' ? ' class="buttons-active"' : ''; ?>
+						   onclick="javascript:ShowNotification(0);">
+							<div class="icon icon-notifications"></div>
+							<span class="icon-messages-num" id="MessageNumber">0</span>
+						</a>           
+                                
+                                 
+                                 
+                                 
+						<?php
+						if ($CurUserRole == 5) {
+							?>
+							<a href="<?php echo $Config['WebsitePath']; ?>/dashboard"
+							   title="<?php echo $Lang['System_Settings']; ?>"<?php echo $UrlPath == 'dashboard' ? ' class="buttons-active"' : ''; ?>>
+								<div class="icon icon-dashboard"></div>
+							</a>
+						<?php }
+						?>
+                               
+                                
+                                <!-- End ----  joe move from default/layout.php -->
+                                
+                                
 			</div>
 			<ul>
+                            
+                             
+                            
+                            
 				<li>
 					<a href="<?php echo $Config['WebsitePath']; ?>/favorites">
 						<strong><?php echo $CurUserInfo['NumFavTopics']; ?></strong>
@@ -75,6 +115,10 @@ foreach ($OauthData as $Value) {
 						<span><?php echo $Lang['Users_Followed']; ?></span>
 					</a>
 				</li>
+                                
+                                
+                               
+                                
 			</ul>
 		</div>
 		<div class="c"></div>
