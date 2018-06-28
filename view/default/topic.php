@@ -23,11 +23,18 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 						• <?php echo($Topic['Views'] + 1); ?><?php echo $Lang['People_Have_Seen']; ?>
 					</div>
 				</div>
+                            
+                            <!-- joe remove avatar
+                            
 				<div class="detail-avatar">
 					<a href="<?php echo $Config['WebsitePath'] . '/u/' . urlencode($Topic['UserName']); ?>">
 						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'large'); ?>
 					</a>
 				</div>
+                            
+                            -->
+                            
+                            
 				<div class="c"></div>
 			</div>
 			<div class="topic-content">
