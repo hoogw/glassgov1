@@ -172,11 +172,14 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 				?>
 				<div class="comment-item">
 					<a name="Post<?php echo $Post['ID']; ?>"></a>
+                                        
+                                        <!--
 					<div class="comment-avatar">
 						<a href="<?php echo $Config['WebsitePath'] . '/u/' . urlencode($Post['UserName']); ?>">
 							<?php echo GetAvatar($Post['UserID'], $Post['UserName'], 'middle'); ?>
 						</a>
 					</div>
+                                        -->
 					<div class="comment-data">
 						<div class="comment-content">
 							<div>
