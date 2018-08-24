@@ -1,16 +1,6 @@
 <?php
 /*
- * Carbon-Forum
- * https://github.com/lincanbin/Carbon-Forum
- *
- * Copyright 2006-2017 Canbin Lin (lincanbin@hotmail.com)
- * http://www.94cb.com/
- *
- * Licensed under the Apache License, Version 2.0:
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * A high performance open-source forum software written in PHP. 
- */
+
 /*
 逐渐替换为帕斯卡命名法
 数据库从设计上避免使用Join多表联查

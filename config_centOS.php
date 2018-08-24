@@ -23,8 +23,8 @@ define('MemCachePrefix', 'gg_');
 define('DBHost', '127.0.0.1');
 define('DBPort', '3306');
 define('DBName', 'glassgov1');
-define('DBUser', 'root');
-define('DBPassword', 'aaaa1111');
+define('DBUser', 'hoogw200_root');
+define('DBPassword', 'medyhzl8113');
 //Sphinx Server
 define('SearchServer', '');
 define('SearchPort', '');
