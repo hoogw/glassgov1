@@ -673,6 +673,8 @@ function XssEscape($html)
 			return '';
 		}
 		$hostWhiteList = array(
+                'j2t.transparentgov.net', 'transparentgov.net', 'www.transparentgov.net',
+                'ms1.transparentgov.net', 'agv1.transparentgov.net',
 			'www.youtube.com', 'youtube.com', 'www.youtu.be', 'youtu.be',
 			'player.youku.com', 'v.youku.com',
 			'video.tudou.com', 'www.tudou.com',

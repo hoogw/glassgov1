@@ -25,6 +25,8 @@
 	 * 配置项主体。注意，此处所有涉及到路径的配置别遗漏URL变量。
 	 */
 	window.UEDITOR_CONFIG = {
+            
+            
 
 		//为编辑器实例添加一个路径，这个不能被注释
 		UEDITOR_HOME_URL: URL
@@ -344,6 +346,12 @@
 
 		//webAppKey 百度应用的APIkey，每个站长必须首先去百度官网注册一个key后方能正常使用app功能，注册介绍，http://app.baidu.com/static/cms/getapikey.html
 		//, webAppKey: ""
+                
+                // allow embed iframe tag
+                ,iframe: ['frameborder','src','width','height']
+                ,object: ['type','data','width','height']
+                
+                
 	};
 
 	function getUEBasePath(docUrl, confUrl) {
