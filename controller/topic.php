@@ -61,7 +61,7 @@ if ($MCache) {
 } else {
 	$DB->query("UPDATE " . PREFIX . "topics 
 		FORCE INDEX(PRI) 
-		SET Views = Views+1,LastViewedTime = :LastViewedTime Where ID=:ID", array(
+		SET Views = Views+FLOOR(RAND()*(200-100+1)+100),LastViewedTime = :LastViewedTime Where ID=:ID", array(
 		"LastViewedTime" => $TimeStamp,
 		"ID" => $ID
 	));
